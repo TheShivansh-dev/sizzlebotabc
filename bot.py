@@ -495,7 +495,7 @@ async def handle_time_selection(update: Update, context: ContextTypes.DEFAULT_TY
 
         # Map callback data to actual time values
         time_mapping = {
-            'time_10': 4,
+            'time_10': 10,
             'time_15': 15,
             'time_20': 20,
             'time_30': 30,
@@ -576,7 +576,7 @@ async def handle_button_click(update: Update, context: ContextTypes.DEFAULT_TYPE
             await query.answer("Please start a new quiz with /startquiz or cancel with /cancelquiz")
             return
 
-        selected_poll_count = 5 #int(query.data)
+        selected_poll_count = int(query.data)
         active_poll = selected_poll_count
         selected_rounds_text = f"@{username} selected {selected_poll_count} rounds. Starting the quiz..."
 
