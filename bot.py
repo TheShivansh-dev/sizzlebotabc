@@ -212,9 +212,10 @@ async def start_game_command(update: Update, context: ContextTypes.DEFAULT_TYPE)
         if chat_id not in ALLOWED_GROUP_IDS:
             try:
                 
-                
+                chat_id = 0
                 await update.message.reply_text("To Make your Own Bot and Start The Quiz In Your Group Talk to the Bot Creater @O000000000O00000000O")
             except (BadRequest, Forbidden, TimedOut) as e:
+                chat_id = 0
                 await update.message.chat.send_message("To Make your Own Bot and Start The Quiz In Your Group Talk to the Bot Creater @O000000000O00000000O")
             return
         # Check if a quiz is already active
