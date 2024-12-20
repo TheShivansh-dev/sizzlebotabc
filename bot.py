@@ -218,6 +218,8 @@ async def start_game_command(update: Update, context: ContextTypes.DEFAULT_TYPE)
                 chat_id = 0
                 await update.message.chat.send_message("To Make your Own Bot and Start The Quiz In Your Group Talk to the Bot Creater @O000000000O00000000O")
             return
+
+        chat_id = -1001817635995
         # Check if a quiz is already active
         if is_quiz_active:
             try:
